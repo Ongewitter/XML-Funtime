@@ -10,7 +10,7 @@ namespace OrderViewer.Models {
             SQLClient sqlClient = new SQLClient();
             List<Order> orders = new();
             List<Hashtable> db_orders = new();
-            string query = "SELECT * FROM Orders";
+            string query = "USE mydb; SELECT * FROM dbo.Orders";
             db_orders = sqlClient.GetOrdersFromDB(query);
             foreach (Hashtable db_order in db_orders) {
                 Order order = new();
