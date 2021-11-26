@@ -22,9 +22,3 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 app.Run();
-
-//public void ConfigureServices(IServiceCollection services) {
-//    services.AddControllersWithViews();
-//    string conStr = this.Configuration.GetConnectionString("DBConnection");
-//    services.AddDbContext<DBContextEF>(options => options.UseSqlServer(conStr));
-//}
