@@ -35,7 +35,7 @@ Just add a file `config.xml` to
 * OrderReader\bin\Release\net6.0
 * OrderViewer\bin\Release\net6.0
 
-As I search for 'settings', then 'connectionString', it should be structured like this:
+It should be structured like this:
 ```xml
 <settings>
 	<connectionString>YourConnectionStringHere</connectionString>
