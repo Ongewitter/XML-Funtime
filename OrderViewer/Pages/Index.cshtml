@@ -1,0 +1,55 @@
+﻿@page
+@model OrderViewer.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<input type="text" id="dateInput" onkeyup="filter()" placeholder="Search for dates..">
+
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Created At</th>
+            <th>Filename</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var row in Model.orders) {
+            <tr> 
+                <td>@row.Id</td> 
+                <td>@row.CreatedAt</td> 
+                <td>@row.Filename</td> 
+            </tr> 
+        }
+    </tbody>
+</table>
+
+@section scripts {
+    <script type="text/javascript">
+        function filter() {
+          const input = document.getElementById("dateInput");
+          let filter = input.value.toUpperCase();
+          const table = document.getElementById("table");
+          const tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (let i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              const txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+    </script>
+}
