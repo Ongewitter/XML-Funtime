@@ -22,7 +22,8 @@ A solution to
   1. CreateDB.exe
   1. OrderGenerator.exe
   1. OrderReader.exe
-* Open the OrderViewer WebApp
+  1. OrderViewer.exe (this starts the server)
+* Open the OrderViewer WebApp by visiting localhost on the port it told you it was hosting on
 * Use the little input box at the top to filter on Date (exactly as displayed, it's a string)
 
 <h2> Custom connectionstring </h2>
