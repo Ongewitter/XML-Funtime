@@ -15,9 +15,9 @@ namespace CreateDB {
 
             // Drop pre-existing tables, then create new one
             Console.WriteLine("Creating Orders table in Database mydb");
-            sqlClient.ExecuteNonQuery("IF EXISTS ( SELECT * FROM sys.tables WHERE name LIKE 'Orders%')"
-                        + "DROP TABLE Orders;"
-                        + "CREATE TABLE Orders ("
+            sqlClient.ExecuteNonQuery("USE mydb; IF EXISTS ( SELECT * FROM sys.tables WHERE name LIKE 'Orders%')"
+                        + "DROP TABLE dbo.Orders;"
+                        + "CREATE TABLE dbo.Orders ("
                             + "id int IDENTITY(1,1),"
                             + "status bit,"
                             + "xml varchar(max),"

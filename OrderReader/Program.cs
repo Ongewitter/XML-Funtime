@@ -45,7 +45,7 @@ namespace OrderReader {
         }
 
         private static void WriteToDB(Hashtable[] ordersInfo) {
-            string query = "INSERT INTO Orders (status, xml, filename) VALUES ";
+            string query = "USE mydb; INSERT INTO dbo.Orders (status, xml, filename) VALUES ";
 
             foreach (Hashtable orderInfo in ordersInfo) {
                 query += "(\'" + orderInfo["status"] + "\', \'" + orderInfo["xml"] + "\',\'" + orderInfo["filename"] + "\'),";
