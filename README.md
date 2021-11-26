@@ -18,7 +18,6 @@ A solution to
 
 <i>I used Visual Studio, I suggest you do the same</i>
 * Check out this repo (duh)
-* Build the solution, so you get the .exe's
 * Run these .exe's in order:
   1. CreateDB.exe
   1. OrderGenerator.exe
