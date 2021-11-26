@@ -7,9 +7,11 @@
 <h1> XML-Funtime </h1>
 
 <h2> Description </h2>
-A `.NET` solution to
-* Write a boolean to XML files in `C:\Orders`
-* read said files and write the boolean, filename and the entire XML to a SQL Database
+
+A solution to
+
+* write a boolean to XML files in `C:\Orders`
+* read said files and write the boolean, filename and the entire XML to an SQL Database
 * view that data in a Web App
 
 <h2> How to run </h2>
