@@ -16,12 +16,12 @@ A solution to
 
 <h2> How to run </h2>
 
-<i>I used Visual Studio, I suggest you do the same</i>
+<i>I used Visual Studio, I suggest you do the same. Just run them in the same order.</i>
 * Check out this repo (duh)
 * Run these .exe's in order:
   1. CreateDB.exe
   1. OrderGenerator.exe
-  1. OrderReader.exe
+  1. OrderReader.exe (this is on a 10s timer, so wait a little before closing or just let it run in the background)
   1. OrderViewer.exe (this starts the server)
 * Open the OrderViewer WebApp by visiting localhost on the port it told you it was hosting on
 * Use the little input box at the top to filter on Date (exactly as displayed, it's a string)
